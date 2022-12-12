@@ -24,7 +24,11 @@ def index():
         for i in l:
             if ((in_string.count(i)>= 1) and (i not in k)):
                 k.append(i)
-        name = k
+        name = ""
+        for i in k:
+            name = name + i + " "
+
+
         return render_template('index.html', namexx=name)
     elif request.method == 'GET':
         print("In GET")
